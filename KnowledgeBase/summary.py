@@ -18,7 +18,7 @@ import random
 
 def summary_extract(pages):
     # Randomly select up to 12 pages, or fewer if there are less than 12
-    selected_pages = random.sample(pages, min(len(pages), 20))
+    selected_pages = random.sample(pages, min(len(pages), 3))
 
     chunks_prompt = """
     Please summarize the below documents:

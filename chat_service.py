@@ -23,6 +23,7 @@ def chat():
     data = request.get_json()
     user_message = data.get('message', '').strip()
     session_id = data.get('session_id', '')  
+    user_id = data.get('user_id','')
     
     stored_context['session_id'] = session_id
     
