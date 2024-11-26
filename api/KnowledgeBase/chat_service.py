@@ -1,6 +1,6 @@
 
 from flask import request, jsonify
-from workflow import  stored_context, graph
+from api.workflow import  stored_context, graph
 
 
 store = {}
@@ -56,4 +56,4 @@ def chat():
 # }
 
 def healthcheck():
-    return jsonify({"status": "API is running"}), 200
+    return jsonify({"status": "API is running good"}), 200

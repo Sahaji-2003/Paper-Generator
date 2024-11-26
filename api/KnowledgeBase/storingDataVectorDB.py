@@ -63,6 +63,7 @@
 
 
 import os
+import re
 from KnowledgeBase.process_files import process_file
 from KnowledgeBase.embeddings import get_vector_store
 from KnowledgeBase.summary import summary_extract
@@ -116,7 +117,9 @@ def storing_in_vector_db(files, knowledge_name, agent_name="default", summary_ca
                 print(f"An error occurred while processing the file {file.filename}: {str(e)}")
 
         if documents_to_insert:
-            unique_index_name = (agent_name + " bge " + knowledge_name).replace(" ", "_")
+            unique_index_name = re.sub(r'\W+', '', (agent_name + " bge " + knowledge_name).replace(" ", "_").lower())
+
+  
             vector_store = set_unique_index(unique_index_name)
 
 
