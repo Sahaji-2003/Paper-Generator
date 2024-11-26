@@ -3,9 +3,9 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from dotenv import load_dotenv
-from api.KnowledgeBase.chat_service import set_user_data, chat, healthcheck
-from api.storing_to_db_endpoint import store_vector_db,get_summary
-from api.delete_index import delete_index
+from chat_service import set_user_data, chat, healthcheck
+from storing_to_db_endpoint import store_vector_db,get_summary
+from delete_index import delete_index
 
 flask_app = Flask(__name__)
 CORS(flask_app)

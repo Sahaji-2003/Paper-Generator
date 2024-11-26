@@ -1,6 +1,6 @@
 
 from flask import request, jsonify
-from api.workflow import  stored_context, graph
+from workflow import  stored_context, graph
 
 
 store = {}
