@@ -108,7 +108,7 @@ from langchain.tools import BaseTool, StructuredTool, tool
 
 # Initialize the Gemini model
 
-llm = ChatGoogleGenerativeAI(temperature=0, api_key=GEMINI_API_KEY, model="gemini-1.5-pro")  # Use the appropriate Gemini model
+llm = ChatGoogleGenerativeAI(temperature=0, api_key=GEMINI_API_KEY, model="gemini-2.0-flash")  # Use the appropriate Gemini model
 # llm=ChatGroq(groq_api_key=GROQ_API_KEY,model_name="llama-3.1-70b-versatile")
 memory = MemorySaver()
 

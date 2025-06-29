@@ -12,7 +12,7 @@ from langchain_core.prompts import PromptTemplate
 from PyPDF2 import PdfReader
 from KnowledgeBase.config import GROQ_API_KEY
 
-llm=ChatGroq(groq_api_key=GROQ_API_KEY,model_name="llama-3.1-70b-versatile")
+llm = ChatGoogleGenerativeAI(temperature=0, api_key=GEMINI_API_KEY, model="gemini-2.0-flash")
 
 import random
 

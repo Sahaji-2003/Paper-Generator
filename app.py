@@ -8,7 +8,7 @@ from storing_to_db_endpoint import store_vector_db,get_summary
 from delete_index import delete_index
 
 flask_app = Flask(__name__)
-CORS(flask_app)
+CORS(flask_app, resources={r"/*": {"origins": "*"}})
 
 load_dotenv()
 flask_app.route('/', methods=['GET'])(healthcheck)
