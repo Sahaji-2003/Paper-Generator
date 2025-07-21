@@ -28,6 +28,7 @@ def store_vector_db():
         return jsonify({"message": "Vector database created successfully", "knowledge_id": knowledge_id}), 200
 
     except Exception as e:
+        print(f"Error storing vector DB: {e}")
         return jsonify({"error": str(e)}), 500
     
 def get_summary(knowledge_id):
